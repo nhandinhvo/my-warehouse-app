@@ -4,7 +4,6 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 serve(async (req) => {
   console.log("Function invoked."); // Log khi function được gọi
 
-  // Xử lý CORS
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: {
       'Access-Control-Allow-Origin': '*',
