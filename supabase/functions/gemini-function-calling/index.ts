@@ -21,7 +21,7 @@ serve(async (req) => {
     }
     console.log("GEMINI_API_KEY is present."); // Log xác nhận có key
 
-    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${GEMINI_API_KEY}`;
+    const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`;
     const { prompt, tools } = await req.json();
     const geminiRequestBody = {
       contents: [{ parts: [{ "text": prompt }] }],
